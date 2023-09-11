@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lucy Pet Care</title>
-        <!-- Style -->
+        <!-- Reset CSS -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
-        <link rel="stylesheet" href="./assets/css/style.css" />
+
         <!-- Favicon -->
         <link
             rel="apple-touch-icon"
@@ -33,6 +33,169 @@
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
             rel="stylesheet"
         />
+        <!-- Style -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-    <body></body>
+    <body style="height: 10000px">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <!-- ---Tổng  Header--- -->
+                <div class="header__inner">
+                    <!-- Logo -->
+                    <a href="#">
+                        <img
+                            src="./assets/img/Logo.svg"
+                            alt="lucy pet"
+                            class="logo"
+                        />
+                    </a>
+                    <!-- Navbar -->
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Home</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">About</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    Services & Rates
+                                </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">Reviews</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    Contacts us
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- 2 nút btn header -->
+                    <div class="header-action">
+                        <a href="" class="header-action__link btn">Sign in</a>
+                        <a href="" class="header-action__btn btn">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <!-- Hero media -->
+                    <div class="hero__media">
+                        <!-- Ảnh lớn -->
+                        <div class="hero__img-wrap">
+                            <img
+                                src="./assets/img/cat.png"
+                                alt=""
+                                class="hero__img"
+                            />
+                            <!-- Decorators -->
+                            <img
+                                src="./assets/img/Union-2.svg"
+                                alt=""
+                                class="hero__decor hero__decor-right"
+                            />
+                            <img
+                                src="./assets/img/Union.svg"
+                                alt=""
+                                class="hero__decor hero__decor-left"
+                            />
+                        </div>
+                        <div class="hero__img-wrap hero__img-wrap-small">
+                            <img
+                                src="./assets/img/dog.png"
+                                alt=""
+                                class="hero__img hero__img-small"
+                            />
+                        </div>
+                        <!-- Ảnh nhỏ kèm mô tả skeleton -->
+                        <div class="hero__list">
+                            <!-- Hero-list-item-1 -->
+                            <div class="hero-list-item">
+                                <img
+                                    src="./assets/img/cat-small.jpg"
+                                    alt=""
+                                    class="hero-list-item__thumb hero-list-item__thumb-left"
+                                />
+                                <div class="hero-list-item__info">
+                                    <p class="hero-list-item__title">
+                                        Pet Health
+                                    </p>
+                                    <div class="hero-list-item__skeleton"></div>
+                                    <div
+                                        class="hero-list-item__skeleton-small"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="hero-list-item-separate"></div>
+                            <!-- Hero-list-item-2 -->
+                            <div class="hero-list-item">
+                                <img
+                                    src="./assets/img/dog-small.jpg"
+                                    alt=""
+                                    class="hero-list-item__thumb hero-list-item__thumb-right"
+                                />
+                                <div class="hero-list-item__info">
+                                    <p class="hero-list-item__title">
+                                        Pet care
+                                    </p>
+                                    <div class="hero-list-item__skeleton"></div>
+                                    <div
+                                        class="hero-list-item__skeleton-small"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero content -->
+                    <section class="hero__content">
+                        <!-- Tiêu đề -->
+                        <h1 class="hero__heading">
+                            Established & Trusted Pet Care Service
+                        </h1>
+                        <!-- Mô tả -->
+                        <p class="hero__desc">
+                            Discover a wide variety of Pawsitive services to
+                            choose from, including daycare, private walks,
+                            office duty and spa.
+                        </p>
+                        <!-- Tổng 2 btn -->
+                        <div class="hero__row">
+                            <!-- Btn trái -->
+                            <a href="" class="btn hero__btn"
+                                >Book a Meet
+                                <!-- icon chevron kèm vòng tròn xung quanh -->
+                                <span class="btn__icon">
+                                    <svg
+                                        width="8"
+                                        height="14"
+                                        viewBox="0 0 8 14"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M1 1L7 7L1 13"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </span>
+                            </a>
+                            <!-- Btn phải -->
+                            <a href="#!" class="hero__cta-link">
+                                Schedule a Call
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>

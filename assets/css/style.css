@@ -6,5 +6,276 @@ html {
     scroll-behavior: smooth;
 }
 body {
+    font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
+    background-color: #fffaf5;
+}
+/* ------------------------------------------------------Common------------------------------------------------------------- */
+:root {
+    --primary-btn-color: #ff5b2e;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Sora", sans-serif;
+}
+/* Phần để các thẻ chưa đc cài đặt sẽ đc thừa kế font size và font family */
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+/* Tổng width trang web */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 135px);
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Nút btn dùng chung */
+.btn {
+    --height: 56px;
+    display: inline-block;
+    height: var(--height);
+    line-height: var(--height);
+    min-width: 130px;
+    border-radius: 25px;
+    border: 1px solid #000958;
+    background-color: transparent;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000958;
+}
+.btn:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+/* Biểu tượng trong nút btn dùng chung */
+.btn__icon {
+    background-color: #fff;
+    color: var(--primary-btn-color);
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -----------------------------------------------------Header----------------------------------------------------------- */
+/* -----Header----- */
+.header {
+    padding-top: 26px;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* -----Navbar----- */
+.navbar__list {
+    display: flex;
+}
+.navbar__link {
+    color: #5e6085;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 8px 18px;
+}
+.navbar__link:hover {
+    color: #000958;
+    text-shadow: 0px 0 1px currentColor;
+}
+/* Header-action */
+.header-action__link.btn,
+.header-action__btn.btn {
+    --height: 50px;
+    min-width: 117px;
+}
+/* --------------------------------------------------Hero---------------------------------------------------------------- */
+.hero {
+    margin-top: 100px;
+}
+/* -----Hero tổng 2 bên trái phải----- */
+.hero__inner {
+    display: flex;
+}
+/* ---Hero bên trái--- */
+.hero__media {
+    position: relative;
+    display: flex;
+    padding-bottom: 94px;
+}
+/* Div Hai ảnh lớn */
+.hero__img-wrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    width: 388px;
+    height: 488px;
+    border-radius: 16px;
+    background: #fe997b;
+    border: 3px solid #fff;
+}
+/* Hai ảnh lớn */
+.hero__img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+/* Hai ảnh trang trí nằm sau */
+.hero__decor {
+    position: absolute;
+    z-index: -1;
+}
+/* Ảnh trang trí nằm sau trái */
+.hero__decor-left {
+    left: -58px;
+    bottom: 10px;
+}
+/* Ảnh trang trí nằm sau phải */
+.hero__decor-right {
+    top: 17px;
+    right: -43px;
+}
+/* Ảnh con chó */
+.hero__img-wrap-small {
+    width: 186px;
+    height: 244px;
+    background: #faa7ad;
+    align-self: flex-end;
+    margin: 0 0 -58px -23px;
+    border: 2px solid #fcdcdf;
+}
+/* Phần các ảnh nhỏ kèm skeleton */
+.hero__list {
+    position: absolute;
+    width: 250px;
+    height: 156px;
+    background: #fff;
+    box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
+    border-radius: 10px;
+    padding: 18px 14px;
+    bottom: 0px;
+    left: 129px;
+}
+/* Phần chứa item ảnh nhỏ kèm skeleton */
+.hero-list-item {
+    display: flex;
+    align-items: center;
+}
+/* Ảnh cat dog siêu nhỏ  */
+.hero-list-item__thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* Ảnh siêu nhỏ chó  */
+.hero-list-item__thumb-right {
+    background-color: #6597c2;
+}
+/* Ảnh siêu nhỏ mèo */
+.hero-list-item__thumb-left {
+    background-color: #fec23f;
+}
+/* Phần info kế bên ảnh siêu nhỏ */
+.hero-list-item__info {
+    margin-left: 10px;
+}
+/* Tiêu đề của ảnh siêu nhỏ */
+.hero-list-item__title {
+    color: #181e52;
+    font-family: "Sora", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1;
+}
+/* Phần skeleton  */
+.hero-list-item__skeleton {
+    margin-top: 6px;
+    width: 118px;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0.08;
+    background: #000958;
+}
+/* Phần skeleton siêu nhỏ */
+.hero-list-item__skeleton-small {
+    margin-top: 6px;
+    width: 39px;
+    height: 4px;
+    border-radius: 10px;
+    opacity: 0.08;
+    background: #000958;
+}
+/* Phần dấu gạch ngang ngăn cách giữa 2 ảnh siêu nhỏ */
+.hero-list-item-separate {
+    margin: 20px 0;
+    width: 100%;
+    height: 2px;
+    background: #f2f2f2;
+    border-radius: 99px;
+}
+/* ---Hero bên phải--- */
+.hero__content {
+    padding: 70px 0 0 120px;
+}
+/* Tiêu đề */
+.hero__heading {
+    max-width: 517px;
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 6.6rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+/* Mô tả */
+.hero__desc {
+    margin-top: 24px;
+    max-width: 391px;
+    color: #656689;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.87;
+}
+/* Chứa 2 nút btn */
+.hero__row {
+    display: flex;
+    align-items: center;
+    margin-top: 38px;
+}
+/* Nút btn bên trái */
+.hero__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    min-width: 190px;
+    --height: 60px;
+    background: var(--primary-btn-color);
+    border: none;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+/* Nút btn bên phải */
+.hero__cta-link {
+    margin-left: 24px;
+    color: #000958;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 3;
+    text-decoration: underline;
 }
