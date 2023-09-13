@@ -1,22 +1,26 @@
 * {
     box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #ff5b2e;
+}
+
 html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
 }
+
 body {
     font-size: 1.6rem;
     font-family: "Poppins", sans-serif;
-    background-color: #fffaf5;
+    background: #fffaf5;
 }
-/* ------------------------------------------------------Common------------------------------------------------------------- */
-:root {
-    --primary-btn-color: #ff5b2e;
-}
+
+/* Common */
 a {
     text-decoration: none;
 }
+
 h1,
 h2,
 h3,
@@ -25,7 +29,7 @@ h5,
 h6 {
     font-family: "Sora", sans-serif;
 }
-/* Phần để các thẻ chưa đc cài đặt sẽ đc thừa kế font size và font family */
+
 input,
 textarea,
 select,
@@ -33,249 +37,383 @@ button {
     font-size: inherit;
     font-family: inherit;
 }
-/* Tổng width trang web */
+
 .container {
     width: 1170px;
-    max-width: calc(100% - 135px);
-    margin-left: auto;
-    margin-right: auto;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
 }
-/* Nút btn dùng chung */
+
 .btn {
     --height: 56px;
-    display: inline-block;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
     height: var(--height);
     line-height: var(--height);
-    min-width: 130px;
-    border-radius: 25px;
-    border: 1px solid #000958;
-    background-color: transparent;
-    font-size: 1.4rem;
+    border: 1px solid rgb(0, 9, 88, 0.7);
+    border-radius: 99px;
     font-weight: 600;
+    font-size: 1.4rem;
     text-align: center;
     color: #000958;
 }
+
 .btn:hover {
-    opacity: 0.7;
+    opacity: 0.9;
     cursor: pointer;
 }
-/* Biểu tượng trong nút btn dùng chung */
+
+.btn--primary {
+    color: #fff;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
 .btn__icon {
-    background-color: #fff;
-    color: var(--primary-btn-color);
-    display: inline-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+    background: #fff;
+    box-shadow: 4px 3px 10px -1px rgba(191, 41, 0, 0.4);
 }
 
-/* -----------------------------------------------------Header----------------------------------------------------------- */
-/* -----Header----- */
-.header {
-    padding-top: 26px;
+.section-heading {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.19;
+    color: #000958;
 }
+
+.section__desc {
+    margin-top: 24px;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #656689;
+}
+
+/* Header */
+.header {
+    padding: 26px 0;
+}
+
 .header__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
-/* -----Navbar----- */
+
 .navbar__list {
     display: flex;
 }
-.navbar__link {
-    color: #5e6085;
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1;
+
+.navbar__link,
+.header-action__link {
     padding: 8px 18px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #5e6085;
 }
+
 .navbar__link:hover {
     color: #000958;
-    text-shadow: 0px 0 1px currentColor;
+    text-shadow: 1px 0 0 currentColor;
 }
-/* Header-action */
-.header-action__link.btn,
-.header-action__btn.btn {
+
+.header-action__btn {
     --height: 50px;
-    min-width: 117px;
+
+    min-width: 118px;
 }
-/* --------------------------------------------------Hero---------------------------------------------------------------- */
+
+/* Hero */
 .hero {
-    margin-top: 100px;
+    margin-top: 74px;
 }
-/* -----Hero tổng 2 bên trái phải----- */
+
 .hero__inner {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 120px;
 }
-/* ---Hero bên trái--- */
+
 .hero__media {
     position: relative;
     display: flex;
     padding-bottom: 94px;
 }
-/* Div Hai ảnh lớn */
+
 .hero__img-wrap {
+    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    position: relative;
     width: 388px;
     height: 488px;
-    border-radius: 16px;
     background: #fe997b;
+    border-radius: 16px;
     border: 3px solid #fff;
 }
-/* Hai ảnh lớn */
+
 .hero__img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
     border-radius: inherit;
 }
-/* Hai ảnh trang trí nằm sau */
+
 .hero__decor {
     position: absolute;
     z-index: -1;
 }
-/* Ảnh trang trí nằm sau trái */
+
 .hero__decor-left {
     left: -58px;
     bottom: 10px;
 }
-/* Ảnh trang trí nằm sau phải */
+
 .hero__decor-right {
-    top: 17px;
+    top: 16px;
     right: -43px;
 }
-/* Ảnh con chó */
+
 .hero__img-wrap-small {
+    align-self: flex-end;
     width: 186px;
     height: 244px;
+    margin: 0 0 -58px -24px;
+    border: 2px solid #f7dddf;
     background: #faa7ad;
-    align-self: flex-end;
-    margin: 0 0 -58px -23px;
-    border: 2px solid #fcdcdf;
 }
-/* Phần các ảnh nhỏ kèm skeleton */
+
 .hero__list {
     position: absolute;
+    left: 129px;
+    bottom: 0;
     width: 250px;
     height: 156px;
+    padding: 18px 14px;
     background: #fff;
     box-shadow: -17px 14px 68px -4px rgba(207, 174, 132, 0.25);
     border-radius: 10px;
-    padding: 18px 14px;
-    bottom: 0px;
-    left: 129px;
 }
-/* Phần chứa item ảnh nhỏ kèm skeleton */
+
 .hero-list-item {
     display: flex;
-    align-items: center;
 }
-/* Ảnh cat dog siêu nhỏ  */
+
 .hero-list-item__thumb {
     width: 40px;
     height: 40px;
     border-radius: 10px;
     object-fit: cover;
+    background: #fec23f;
 }
-/* Ảnh siêu nhỏ chó  */
-.hero-list-item__thumb-right {
-    background-color: #6597c2;
-}
-/* Ảnh siêu nhỏ mèo */
-.hero-list-item__thumb-left {
-    background-color: #fec23f;
-}
-/* Phần info kế bên ảnh siêu nhỏ */
+
 .hero-list-item__info {
     margin-left: 10px;
 }
-/* Tiêu đề của ảnh siêu nhỏ */
+
 .hero-list-item__title {
-    color: #181e52;
-    font-family: "Sora", sans-serif;
-    font-size: 1.4rem;
+    font-family: Sora, sans-serif;
     font-weight: 600;
+    font-size: 1.4;
     line-height: 1;
+    color: #181e52;
 }
-/* Phần skeleton  */
+
 .hero-list-item__skeleton {
     margin-top: 6px;
-    width: 118px;
+    width: var(--width, 118px);
     height: 4px;
-    border-radius: 10px;
-    opacity: 0.08;
     background: #000958;
-}
-/* Phần skeleton siêu nhỏ */
-.hero-list-item__skeleton-small {
-    margin-top: 6px;
-    width: 39px;
-    height: 4px;
-    border-radius: 10px;
     opacity: 0.08;
-    background: #000958;
+    border-radius: 10px;
 }
-/* Phần dấu gạch ngang ngăn cách giữa 2 ảnh siêu nhỏ */
-.hero-list-item-separate {
-    margin: 20px 0;
+
+.hero-list-item__separate {
     width: 100%;
     height: 2px;
+    margin: 20px 0;
     background: #f2f2f2;
     border-radius: 99px;
 }
-/* ---Hero bên phải--- */
-.hero__content {
-    padding: 70px 0 0 120px;
+
+.hero-list-item:nth-of-type(2) .hero-list-item__thumb {
+    background: #c6e2fa;
 }
-/* Tiêu đề */
+
 .hero__heading {
-    max-width: 517px;
-    color: #000958;
-    font-family: Sora, sans-serif;
-    font-size: 6.6rem;
     font-weight: 800;
+    font-size: 6.6rem;
     line-height: 1.15;
+    color: #000958;
 }
-/* Mô tả */
+
 .hero__desc {
+    width: 391px;
     margin-top: 24px;
-    max-width: 391px;
-    color: #656689;
     font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.87;
+    line-height: 1.88;
+    color: #656689;
 }
-/* Chứa 2 nút btn */
+
 .hero__row {
     display: flex;
     align-items: center;
     margin-top: 38px;
 }
-/* Nút btn bên trái */
-.hero__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #fff;
-    min-width: 190px;
+
+.hero__cta-btn {
     --height: 60px;
-    background: var(--primary-btn-color);
-    border: none;
+
+    min-width: 190px;
+    font-size: 1.6rem;
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
 }
-/* Nút btn bên phải */
+
 .hero__cta-link {
     margin-left: 24px;
-    color: #000958;
-    font-size: 1.6rem;
     font-weight: 500;
-    line-height: 3;
+    font-size: 1.6rem;
+    line-height: 1;
     text-decoration: underline;
+    color: #000958;
+}
+
+/* About */
+.about {
+    margin-top: 138px;
+}
+
+.about__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.about__media {
+    position: relative;
+}
+
+.about__label {
+    font-family: Sora, sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #5e6085;
+}
+
+.about__heading {
+    margin-top: 15px;
+}
+
+.about__heading,
+.about__desc {
+    width: 444px;
+}
+
+.about__checklist {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    gap: 36px;
+    margin-top: 54px;
+}
+
+.about__check-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: #48496a;
+}
+
+.about__check-item::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #ff5d31;
+    box-shadow: 0px 4px 15px -3px rgba(255, 93, 49, 0.69);
+    border-radius: 4px;
+}
+
+.about__check-item::after {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    content: url(../icons/check.svg);
+}
+
+.about__card {
+    position: absolute;
+    top: 165px;
+    left: 0;
+    width: 136px;
+    padding: 30px 26px;
+    background: #5bd6e2;
+    box-shadow: -15px 26px 48px rgba(85, 240, 255, 0.17);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about__card-title {
+    font-family: Sora, sans-serif;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 1;
+    color: #fff;
+}
+
+.about__card-desc {
+    margin-top: 14px;
+    font-size: 1.4rem;
+    line-height: 1.43;
+    color: #c6f4f9;
+}
+
+.about__card-decor {
+    position: absolute;
+    top: -39px;
+    right: -32px;
+}
+
+.about__img-wrap {
+    position: relative;
+    width: 494px;
+    margin-left: auto;
+}
+
+.about__img-wrap::after {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: -1;
+    content: "";
+    height: 336px;
+    background: linear-gradient(180deg, #fce0ef 0%, #fac3d1 100%);
+    border-radius: 16px;
+}
+
+.about__img {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about__media-decor {
+    position: absolute;
+    top: 157px;
+    right: -50px;
+    z-index: -1;
 }
