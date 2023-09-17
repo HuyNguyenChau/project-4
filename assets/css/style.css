@@ -548,3 +548,117 @@ button {
 .tab__content-item--active {
     display: block;
 }
+/* ------------------------------------------------------Service------------------------------------------------------------ */
+.service {
+    padding: 68px 0 100px;
+    background: #fff6ed;
+    margin-top: 185px;
+}
+.service__top {
+    text-align: center;
+}
+.service__desc {
+    color: #5e6085;
+    font-family: Sora, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+/* -----Service body----- */
+.service__body {
+    margin-top: 31px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    justify-content: space-between;
+    column-gap: 71px;
+}
+
+.service-item {
+    margin-top: 40px;
+    padding: 30px 22px 30px 28px;
+    width: 294px;
+    max-height: 208px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #fff;
+}
+.service-item__heading {
+    display: flex;
+    align-items: center;
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.service-item__heading::before {
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    width: 2px;
+    height: 22px;
+    border-radius: 1px;
+    background: linear-gradient(90deg, #ff5b2e 0.39%, #ffa187 100.29%);
+}
+.service-item__desc {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.71;
+}
+.service-item__more {
+    position: relative;
+    display: inline-block;
+    margin-top: 24px;
+    color: #34396a;
+    font-family: Sora;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.service-item__more::after {
+    position: absolute;
+    content: url(/assets/icons/arrowupright.svg);
+    margin-left: 6px;
+    width: 12px;
+    height: 12px;
+    right: -18px;
+    top: 0.7px;
+}
+.service-item + .service-item {
+    margin-top: 24px;
+}
+/* Service column 2 */
+.service__media {
+    position: relative;
+    width: 440px;
+    height: 650px;
+}
+.service__media::after {
+    position: absolute;
+    content: "";
+    top: 300px;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9df1fb 0%, #73d0db 108.14%);
+}
+.service__media-img {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    /* height: 621px; */
+}
+.service__btn {
+    display: block;
+    margin: 45px auto 0;
+    width: 214px;
+    border: 1px solid #ff5b2e;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+    color: #ff5b2e;
+}
