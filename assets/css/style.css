@@ -662,3 +662,91 @@ button {
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
     color: #ff5b2e;
 }
+/* --------------------------------------------------------Staff----------------------------------------------------------- */
+.staff {
+    padding: 130px 0;
+}
+.staff__desc {
+    margin-bottom: 15px;
+    color: #5e6085;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+}
+.staff__heading {
+    text-align: center;
+}
+/* -----Staf list----- */
+.staff__list {
+    margin: 73px 0 48px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    column-gap: 67px;
+}
+
+.staff-item__img-wrap {
+    position: relative;
+    display: flex;
+    width: 234px;
+    height: 266px;
+    border-radius: 129.5px;
+    background: linear-gradient(180deg, #90ccff 0%, #59a8eb 95.96%);
+}
+.staff-item__img-wrap::after {
+    content: url(/assets/img/Rectangle-staff.svg);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.staff__list .staff__item:nth-child(even) .staff-item__img-wrap::after {
+    content: url(/assets/img/Rectangle-staff-2.svg);
+    top: 0px;
+    bottom: unset;
+    transform: translateX(-50%);
+}
+.staff__list .staff__item:nth-child(3) .staff-item__img-wrap::after {
+    content: url(/assets/img/Rectangle-staff-3.svg);
+}
+.staff__list .staff__item:nth-child(4) .staff-item__img-wrap::after {
+    content: url(/assets/img/Rectangle-staff-4.svg);
+}
+.staff-item__img {
+    position: absolute;
+    bottom: -1px;
+    width: 234px;
+    height: 290px;
+    border-radius: inherit;
+    object-fit: cover;
+}
+.staff-item__title {
+    margin-top: 29px;
+    color: #656689;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.staff-item__name {
+    margin-top: 14px;
+    color: #000958;
+    text-align: center;
+    font-family: Sora;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+/* Btn */
+.staff__cta-wrap {
+    margin-top: 48px;
+    text-align: center;
+}
+.staff__cta-btn {
+    width: 193px;
+    border: 1px solid #ff5b2e;
+    color: #ff5b2e;
+    box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
