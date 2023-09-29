@@ -19,6 +19,8 @@ body {
 /* -----------------------------------------------------------Common--------------------------------------------------------- */
 a {
     text-decoration: none;
+    outline-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 h1,
@@ -36,6 +38,8 @@ select,
 button {
     font-size: inherit;
     font-family: inherit;
+    outline-color: transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -124,7 +128,7 @@ button {
 
 .navbar__link:hover {
     color: #000958;
-    text-shadow: 1px 0 0 currentColor;
+    text-shadow: 0 0 1px currentColor;
 }
 
 .header-action__btn {
@@ -749,4 +753,152 @@ button {
     border: 1px solid #ff5b2e;
     color: #ff5b2e;
     box-shadow: 0px 13px 26px -8px rgba(255, 91, 46, 0.42);
+}
+/* --------------------------------------------------------Pricing---------------------------------------------------------- */
+.pricing {
+    padding: 86px 0;
+    background: #fff6ed;
+}
+.pricing__heading {
+    text-align: center;
+}
+.pricing__desc {
+    width: 709px;
+    color: #656689;
+    margin: 24px auto 38px;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.875;
+}
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+.pricing__inner {
+    position: relative;
+}
+.pricing__input {
+    display: none;
+}
+.pricing__label {
+    position: relative;
+    outline: unset;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 276px;
+    height: 56px;
+    border-radius: 31px;
+    border: 1px solid #ff5b2e;
+}
+.pricing__label::before {
+    position: absolute;
+    outline: unset;
+    display: flex;
+    content: "";
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 56px;
+    border-radius: 31px;
+    background: #ff5b2e;
+    color: #fff;
+    transition: all 1s ease;
+}
+.pricing__input:checked ~ .pricing__label::before {
+    transform: translateX(calc(100% + 14px));
+    width: 131px;
+}
+.pricing__label-desc {
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0 40px;
+    z-index: 1;
+    transition: color 1s ease;
+}
+.pricing__label-desc--right {
+    color: #ff5b2e;
+}
+.pricing__input:checked ~ .pricing__label .pricing__label-desc {
+    color: #ff5b2e;
+}
+.pricing__input:checked ~ .pricing__label .pricing__label-desc--right {
+    color: #fff;
+}
+.pricing__sale-off {
+    position: absolute;
+    right: -110.614px;
+    top: -10px;
+}
+/*  */
+.pricing__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    column-gap: 44px;
+    margin-top: 56px;
+}
+.pricing-item {
+    width: 302px;
+    border-radius: 20px;
+    background: #fff;
+    padding: 30px 28px 43px;
+}
+.pricing-item__type {
+    color: #ff5b2e;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.pricing-item__heading {
+    margin-top: 8px;
+    color: #3f4065;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+}
+.pricing-item__price {
+    margin-top: 24px;
+    color: #000958;
+    font-family: Sora;
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03;
+}
+.pricing-item__btn {
+    margin-top: 22px;
+    width: 246px;
+    --height: 44px;
+    border: 1px solid rgba(255, 91, 46, 0.6);
+    background-color: transparent;
+    color: #ff5b2e;
+}
+.pricing-item__btn:hover {
+    background: #ff5b2e;
+    color: #fff;
+}
+.pricing-item__list {
+    margin-top: 24px;
+}
+.pricing-item__item {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.pricing-item__item::before {
+    position: relative;
+    top: 3px;
+    left: 0;
+    margin-right: 12px;
+    content: url(/assets/icons/check-1.svg);
 }
